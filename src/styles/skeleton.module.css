@@ -1,0 +1,23 @@
+.section {
+  width: var(--body-width);
+  margin: auto;
+}
+.info {
+  padding: 15px 0;
+  margin-top: 50px;
+}
+.title {
+  padding: 30px 0;
+  margin: 20px 0;
+}
+.text {
+  padding: 100px 0;
+  margin: 20px 0;
+}
+.info,
+.title,
+.text {
+  width: 800px;
+  background-color: #b3b3b3;
+  border-radius: 5px;
+}

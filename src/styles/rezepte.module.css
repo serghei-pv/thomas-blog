@@ -1,0 +1,57 @@
+.ul,
+.section {
+  width: var(--body-width);
+  margin: auto;
+  margin-bottom: 200px;
+}
+.section {
+  margin-top: 50px;
+}
+.titleInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.section h2 {
+  margin: 10px 0;
+}
+.img {
+  text-align: center;
+  margin: 50px 0;
+}
+.img img {
+  border-radius: 25px;
+}
+.recipeInfo span {
+  margin-right: 25px;
+}
+.zutaten h3 {
+  margin-bottom: 15px;
+}
+.zutaten ul {
+  width: var(--body-width);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: square;
+}
+.zutaten li {
+  margin-bottom: 10px;
+  margin-left: 4%;
+  min-width: 45%;
+}
+.vorwort,
+.zubereitung {
+  margin-top: 50px;
+}
+.vorwort h3,
+.zubereitung h3 {
+  margin-bottom: 10px;
+}
+.zubereitung p,
+.zubereitung h4 {
+  margin: 20px 0;
+}
+.schlusswort {
+  margin-top: 100px;
+  text-align: center;
+}
