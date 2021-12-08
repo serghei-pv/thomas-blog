@@ -34,14 +34,13 @@
   position: relative;
 }
 .img {
-  margin-left: 5%;
+  margin-right: 50px;
 }
 .img img {
   border-radius: 10px;
 }
-.beschreibung,
-.beschreibung p {
-  margin: 10px 0;
+.rezept p span {
+  margin-right: 50px;
 }
 .titel {
   padding: 10px 0;

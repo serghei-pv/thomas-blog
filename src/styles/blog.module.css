@@ -8,27 +8,11 @@
   margin-top: 50px;
 }
 .section h2 {
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 50px;
 }
 .section p,
 .section h4 {
   margin: 20px 0;
-}
-.ul {
-  animation: fadeIn forwards 1s;
-  -webkit-animation: fadeIn forwards 1s;
-  -moz-animation: fadeIn forwards 1s;
-  -o-animation: fadeIn forwards 1s;
-  -ms-animation: fadeIn forwards 1s;
-}
-@keyframes fadeIn {
-  from {
-    margin-top: -50px;
-    opacity: 0;
-  }
-  to {
-    margin-top: 0;
-    opacity: 1;
-  }
 }

@@ -1,6 +1,5 @@
 import { createClient } from "contentful";
 import styles from "../../src/styles/rezepte.module.css";
-import { formatDate } from "../../src/Hooks/formatDate";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Skeleton from "../../src/components/Skeleton";
 import Image from "next/image";
@@ -16,24 +15,18 @@ export default function rezept({ post }: any) {
   }
 
   const { bild, nahrungstyp, portionen, schwierigkeit, titel, vorwort, zubereitung, zutaten, vorbereitungszeit } = post.fields;
-  const { createdAt } = post.sys;
-
-  let date: string = formatDate(createdAt);
-
   return (
     <>
-      <h1>Rezepte</h1>
       <section className={styles.section}>
-        <span>{date}</span>
         <h2>{titel}</h2>
-        <div className={styles.recipeInfo}>
-          <span>
-            {portionen} {portionen > 1 ? "Portionen" : "Portion"}
-          </span>
-          <span>{vorbereitungszeit}</span>
-          <span>{schwierigkeit}</span>
-          <span>{nahrungstyp}</span>
-        </div>
+
+        <p className={styles.recipeInfo}>
+          Ein <b>{nahrungstyp != undefined && nahrungstyp + "es"}</b> Rezept für{" "}
+          <b>
+            {portionen == 1 ? "eine" : portionen} {portionen > 1 ? "Portionen" : "Portion"}
+          </b>{" "}
+          mit einer geschätzten Vorbereitungszeit von <b>{vorbereitungszeit}</b> und der Schwierigkeit <b>{schwierigkeit}</b>{" "}
+        </p>
         <div className={styles.img}>
           <Image src={"https:" + bild.fields.file.url} alt="Ein Bild des Gerichts" width={480} height={600} />
         </div>

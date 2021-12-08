@@ -17,16 +17,13 @@ export default function blogpost({ post }: any) {
   const { titel, text } = post.fields;
   const { createdAt } = post.sys;
 
-  console.log(post);
-
   let date: string = formatDate(createdAt);
 
   return (
     <>
-      <h1>Blog</h1>
       <section className={styles.section}>
-        <span>{date}</span>
         <h2>{titel}</h2>
+        <span>{date}</span>
         <article>{documentToReactComponents(text)}</article>
       </section>
     </>
